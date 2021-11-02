@@ -8,7 +8,5 @@ demo1：爬取https://github.com/freefq/free页面的订阅url
 
 打包方式：
 
-![image-20211102171452705](https://gitee.com/changluJava/picture-bed/raw/master/2021/20211102171632.png)
-
 ![image-20211102171452705](./images/20211102171452.png)    
 
