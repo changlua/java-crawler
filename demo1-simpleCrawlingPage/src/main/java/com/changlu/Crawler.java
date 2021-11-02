@@ -28,14 +28,22 @@ public class Crawler {
     }
 
     public static void writeFile(String content){
+        BufferedOutputStream bos = null;
         try {
             logger.info("写入文件中....");
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("code.txt"));
+            bos = new BufferedOutputStream(new FileOutputStream("code.txt"));
             bos.write(content.getBytes());
             logger.info("写入成功！");
-            bos.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            if(bos != null){
+                try {
+                    bos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
